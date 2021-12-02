@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct GuessingGame: View {
+    
+    //The current Guess of the user
+    @State var currentGuess: Double = 50.0
+    
     var body: some View {
         return VStack {
-            Slider(value: .constant(50.0),
+            Slider(value: $currentGuess,
                    in: 0.0...100.0,
                    label: {
                         Text("Opacity")
@@ -22,7 +26,7 @@ struct GuessingGame: View {
                         Text("100")
             })
             
-            Text("61")
+            Text("\(String(format:"%.0f", currentGuess))")
                 .font(.title)
                 .fontWeight(.semibold)
             
