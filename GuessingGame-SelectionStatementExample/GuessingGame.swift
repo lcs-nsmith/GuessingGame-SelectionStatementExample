@@ -21,6 +21,7 @@ struct GuessingGame: View {
         return VStack {
             Slider(value: $currentGuess,
                    in: 0.0...100.0,
+                   step: 1,
                    label: {
                 Text("Opacity")
             },
