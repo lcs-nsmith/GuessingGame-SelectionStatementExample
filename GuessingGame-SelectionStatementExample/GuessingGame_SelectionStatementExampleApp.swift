@@ -11,7 +11,7 @@ import SwiftUI
 struct GuessingGame_SelectionStatementExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GuessingGame()
         }
     }
 }
