@@ -17,6 +17,7 @@ struct GuessingGame: View {
     let target = Int.random(in: 1...100)
     
     @State var feedback = ""   //No hint to start the game
+    
     var body: some View {
         return VStack {
             Slider(value: $currentGuess,
